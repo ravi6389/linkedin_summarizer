@@ -81,7 +81,7 @@ p1 = st.text_input('Enter the LinkedIn profile')
 if st.button('Click for summary'):
     with st.spinner("Generating response.."):
     
-        llm = HuggingFaceHub(repo_id="declare-lab/flan-alpaca-large",\
+        llm = HuggingFaceHub(repo_id=st.secrets['repo_id'],\
                         huggingfacehub_api_token = token, model_kwargs={"temperature":1e-10, "max_length":512})
         linkedin_data1 = scrape_linkedin_profile(p1)
         full_name = linkedin_data1.get('full_name')
