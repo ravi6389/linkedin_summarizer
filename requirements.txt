@@ -1,6 +1,6 @@
 protobuf==5.27.2
 langchain
-langchain_community.llms 
+HuggingFaceHub
 streamlit
 langchain_community
 
