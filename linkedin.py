@@ -1,29 +1,18 @@
-# import os
+
 import requests
-# from dotenv import load_dotenv
+
 from langchain import PromptTemplate
-#from langchain.chat_models import ChatOpenAI
+
 from langchain.chains import LLMChain
 import pandas as pd
 import numpy as np
-
 import streamlit as st
-
-from transformers import AutoModelForSeq2SeqLM
 from langchain_community.llms import HuggingFaceHub
 
-#from langchain_openai import AzureChatOpenAI, AzureOpenAIEmbeddings
-from sklearn.metrics.pairwise import cosine_similarity
 
-from fastembed.embedding import DefaultEmbedding
 
-#from langchain import HuggingFacePipeline
-from transformers import AutoTokenizer
 
-import torch
-#from transformers import LlamaTokenizer, LlamaForCausalLM
 
-# load_dotenv()
 
 if 'list_df' not in st.session_state:
     st.session_state['list_df'] =''
