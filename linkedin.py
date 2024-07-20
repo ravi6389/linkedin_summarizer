@@ -1,4 +1,4 @@
-import os
+# import os
 import requests
 from dotenv import load_dotenv
 from langchain import PromptTemplate
@@ -23,7 +23,7 @@ from transformers import AutoTokenizer
 import torch
 #from transformers import LlamaTokenizer, LlamaForCausalLM
 
-load_dotenv()
+# load_dotenv()
 
 if 'list_df' not in st.session_state:
     st.session_state['list_df'] =''
@@ -37,15 +37,15 @@ if 'profile' not in st.session_state:
     st.session_state['profile'] = ''
 
 
-token = os.environ['HUGGINGFACEHUB_API_TOKEN']
-print(token)
+token = st.secrets['HUGGINGFACEHUB_API_TOKEN']
+# print(token)
 
 
 def scrape_linkedin_profile(linkedin_profile_url:str):
     
     """scrape information from LinkedIn profiles,
     Manually scrape the information from the LinkedIn profile"""
-    headers = {'Authorization': 'Bearer ' + "QFVFLoRcXcRAsS1He3OikQ"}
+    headers = {'Authorization': 'Bearer ' + st.secrets["PROXYCURL_API_KEY"]}
     api_endpoint = 'https://nubela.co/proxycurl/api/v2/linkedin'
     
 
