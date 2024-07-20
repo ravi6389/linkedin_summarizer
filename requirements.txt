@@ -1,0 +1,7 @@
+protobuf==5.27.2
+langchain
+
+streamlit
+langchain_community
+
+torch
