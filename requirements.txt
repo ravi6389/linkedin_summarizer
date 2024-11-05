@@ -1,8 +1,10 @@
 protobuf==5.27.2
-langchain
+langchain 
+langchain_experimental 
+langchain-groq
 langchain-huggingface
 streamlit
 langchain_community
-from langchain_groq import ChatGroq
+
 
 torch
