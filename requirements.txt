@@ -3,5 +3,6 @@ langchain
 langchain-huggingface
 streamlit
 langchain_community
+from langchain_groq import ChatGroq
 
 torch
